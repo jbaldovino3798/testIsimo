@@ -1,0 +1,99 @@
+/* Estilo para el contenedor principal */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+/* Ajustar el formulario */
+form {
+    width: 90%; /* Ocupa todo el ancho del contenedor */
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el formulario en la página */
+    padding: 20px; /* Agrega un espacio alrededor del formulario */
+}
+
+/* Ajustar los inputs */
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Ocupa todo el ancho disponible menos el espacio del padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Agrega un espacio entre los inputs */
+    outline: none;
+}
+
+/* Ajustar el botón */
+button {
+    width: calc(100% - 30px); /* Ocupa todo el ancho disponible menos el espacio del padding */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; /* Agrega un espacio entre el botón y los inputs */
+    outline: none;
+}
+
+
+/* Estilo para las etiquetas */
+label {
+    font-weight: bold;
+}
+
+/* Estilo para los mensajes de error */
+.alert-danger {
+    margin-top: 5px; /* Agrega un espacio entre los mensajes de error y los inputs */
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Estilo para la clase de fortaleza de la contraseña */
+.alert-info {
+    margin-top: 5px; /* Agrega un espacio entre los mensajes de información y los inputs */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* loading bar
+/* Estilos para la superposición de carga */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Z-index alto para que esté por encima de todo */
+  }
+  
+  /* Estilos para el spinner */
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #007bff; /* Color del spinner */
+    border-top: 4px solid transparent; /* Parte superior transparente para crear el efecto de giro */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Animación de giro */
+  }
+  
+  /* Animación de giro */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

@@ -1,0 +1,34 @@
+<section>
+
+    <div class="d-flex justify-content-between">
+        <h4>Usuarios</h4>
+        <a routerLink="/users/create" class="btn btn-success">Crear Usuario Nuevo</a>
+    </div>
+
+    <br>
+
+    <!-- Agrega el input de filtrado con CSS personalizado -->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Filtrar por email" [(ngModel)]="filterEmail" (input)="applyFilter()">
+        <span class="search-icon">
+            <i class="fas fa-search"></i>
+        </span>
+    </div>
+
+    <br><br>
+    <table class="table" *ngIf="filteredUsers.length > 0">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <tr *ngFor="let user of filteredUsers">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+    </table>
+    <div *ngIf="filteredUsers.length === 0">
+        No se encontraron usuarios.
+    </div>
+</section>
